@@ -1,0 +1,95 @@
+doctype html
+html(lang='en')
+
+    head
+
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+        meta(name='description', content='')
+        meta(name='author', content='')
+
+        title Clean Blog - Start Bootstrap Theme
+
+        link(rel='icon', type='image/x-icon', href='assets/favicon.ico')
+
+        include includes/css.pug
+
+    body
+
+        include includes/navbar.pug
+
+        // Page Header
+        header.masthead(style="background-image: url('assets/img/contact-bg.jpg')")
+            .container.position-relative.px-4.px-lg-5
+                .row.gx-4.gx-lg-5.justify-content-center
+                    .col-md-10.col-lg-8.col-xl-7
+                        .page-heading
+                            h1 User Login
+
+        // Main Content
+        main.mb-4
+            .container.px-4.px-lg-5
+                .row.gx-4.gx-lg-5.justify-content-center
+                    .col-md-10.col-lg-8.col-xl-7
+
+                        .my-5
+
+                            // * * * * * * * * * * * * * * *
+                            // * * SB Forms Contact Form * *
+                            // * * * * * * * * * * * * * * *
+
+                            // This form is pre-integrated with SB Forms.
+                            // To make this form functional, sign up at
+                            // https://startbootstrap.com/solution/contact-forms
+                            // to get an API token!
+
+                            form
+                                .form-floating
+                                    input#name.form-control(
+                                        type='text',
+                                        placeholder='Enter your Username...',
+                                        data-sb-validations='required'
+                                    )
+                                    label(for='name') Username
+                                    .invalid-feedback(data-sb-feedback='name:required')
+                                        | A Username is required.
+                                .form-floating
+                                    input#email.form-control(
+                                        type='password',
+                                        placeholder='Enter your password...',
+                                        data-sb-validations='required,password'
+                                    )
+                                    label(for='password') Password
+                                    .invalid-feedback(data-sb-feedback='email:required')
+                                        | Password is required.
+
+                                br
+
+                                // Submit success message
+                                //
+                                // This is what your users will see when the form
+                                // has successfully submitted
+
+                                //#submitSuccessMessage.d-none
+                                //    .text-center.mb-3
+                                //        .fw-bolder Form submission successful!
+                                //        | To activate this form, sign up at
+                                //        br
+                                //        a(href='https://startbootstrap.com/solution/contact-forms') https://startbootstrap.com/solution/contact-forms
+
+                                // Submit error message
+                                //
+                                // This is what your users will see when there is
+                                // an error submitting the form
+
+                                //#submitErrorMessage.d-none
+                                //    .text-center.text-danger.mb-3 Error sending message!
+
+                                // Submit Button
+                                button#submitButton.btn.btn-primary.text-uppercase.disabled(type='submit') Login
+
+        include includes/footer.pug
+
+        include includes/scripts.pug
+
+        script(src='https://cdn.startbootstrap.com/sb-forms-latest.js')
